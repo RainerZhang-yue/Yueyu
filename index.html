@@ -3,81 +3,133 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<style type="text/css">
-			img{
-				width: 400px;
-				height: auto;
-				display: block;
-				margin: 0 auto;
-				transition: all 3s;
-			}
-			img:hover{
-				-webkit-filter: none;
-			}
-			.img1{
-				/* 滤镜属性
-				 grayscale:设置灰度，1是百分之百，0是百分之0
-				 */
-				-webkit-filter: grayscale(1);
-			}
-			.img2{
-				/* 滤镜属性
-				 brightness:亮度，默认值是1，正常亮度
-				 */
-				-webkit-filter: brightness(2);
-			}
-			.img3{
-				/* 褐色属性
-				 sepia:1百分之百褐色，正常为0
-				 */
-				-webkit-filter: sepia(1);
-			}
-			.img4{
-				/* 模糊度
-				 blur:单位像素
-				 */
-				-webkit-filter: blur(50px);
-			}
-			.img5{
-				/* 对比度
-				 contrast:对比度，正常就是1，如果调成0，就没有任何对比度，变为灰色
-				 */
-				-webkit-filter: contrast(1);
-			}
-			.img6{
-				/* 饱和度
-				 saturate:对比度，正常就是1，如果调成0，就没有任何对比度，变为灰色
-				 */
-				-webkit-filter: saturate(1);
-			}
-			.img7{
-				/* 胶片底色效果 */
-				-webkit-filter: invert(1);
-			}
-			.img8{
-				/* 色相旋转 */
-				-webkit-filter: hue-rotate(0deg);
-			}
-			
-			.img9{
-				-webkit-filter: blur(10px) brightness(10) grayscale(1);
-				transition: all 15s;
-			}
-			.img9:hover{
-				-webkit-filter: blur(0) brightness(1);
-			}
-		</style>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/banner.css"/>
+		<link rel="stylesheet" type="text/css" href="css/subbanner.css"/>
 	</head>
 	<body>
-		<img class="img1" src="img/陈学冬.jpg" >
-		<img class="img2" src="img/陈学冬.jpg" >
-		<img class="img3" src="img/陈学冬.jpg" >
-		<img class="img4" src="img/陈学冬.jpg" >
-		<img class="img5" src="img/陈学冬.jpg" >
-		<img class="img6" src="img/陈学冬.jpg" >
-		<img class="img7" src="img/陈学冬.jpg" >
-		<img class="img8" src="img/陈学冬.jpg" >
-		
-		<img class="img9" src="img/陈学冬.jpg" >
+		<!-- 
+			0、分析页面结构
+			1、先写html结构
+			2、再写样式
+			注意：分析页面是否包含移动端，如包含移动端一定要加上meta viewport
+		 -->
+		 <div class="ad">
+		 	<p><广告></p>
+		 </div>
+		 <div class="nav">
+		 	<a href="" class="logo"></a>
+		 	<a href="" class="text">Mac</a>
+		 	<a href="" class="text">iPad</a>
+		 	<a href="" class="text">iPhone</a>
+		 	<a href="" class="text">Watch</a>
+		 	<a href="" class="text">Music</a>
+		 	<a href="" class="text">技术支持</a>
+		 	<a href="" class="search"></a>
+		 	<a href="" class="buy"></a>
+			<input hidden="hidden" type="checkbox" name="choose" id="choose" value="" />
+			<label for="choose" class="toggleBtn">
+				<span class="line"></span>
+				<span class="line"></span>
+			</label>
+			<!-- .navpage>.navMain>.searchInput+.navList>a.navText*7 -->
+			<div class="navpage">
+				<div class="navMain">
+					<div class="searchInput">
+						<div class="icon"></div>
+						<input type="text" placeholder="搜索 apple.com.cn" name="" id="" value="" />
+					</div>
+					<hr >
+					<div class="navList">
+						<a href="" class="navText">Mac</a>
+						<a href="" class="navText">iPad</a>
+						<a href="" class="navText">iPhone</a>
+						<a href="" class="navText">Watch</a>
+						<a href="" class="navText">Music</a>
+						<a href="" class="navText">技术支持</a>
+					</div>
+				</div>
+			</div>
+		 </div>
+		 <div class="buyguide">
+		 	<span>
+		 		<a>在线选购</a>，享受免费送货、Specialist 专家支持、免息分期等服务。
+		 	</span>
+		 </div>
+		 <div class="banner banner1">
+		 	<span>新款</span>
+		 	<h1>iPhone SE</h1>
+		 	<h2>称心称手，超值入手。</h2>
+			<h2>RMB 3299 起</h2>
+		 	<p>折抵换购，仅 RMB 96/月或RMB 2299起1。</p>
+		 	<div class="link">
+				<a href=""><div class="dayu">进一步了解</div></a>
+				<a href=""><div class="dayu">购买</div></a>
+			</div>
+		 </div>
+		 <div class="banner banner2">
+			 <h1>iPhone 11</h1>
+			 <h2>一切都刚刚好。</h2>
+			 <p>折抵换购，仅 RMB 176/月或RMB 4199起1。</p>
+			 <div class="link">
+			 	<a href=""><div class="dayu">进一步了解</div></a>
+			 	<a href=""><div class="dayu">购买</div></a>
+			 </div>
+		 </div>
+		 <div class="banner banner3">
+			 <h1>为高校生活购买 Mac <br>或 iPad，Airpods<span>搭配其中。</span></h1>
+			 <div class="link">
+				 <a href=""><div class="dayu">选购</div></a>
+			</div>
+		 </div>
+		 <div class="subbanner sub1">
+		 	<div class="banner left">
+		 		<h1>创造停不住。</h1>
+				<h2>敬张西，敬Mac背后的你。</h2>
+				<div class="link">
+					<a href=""><div class="dayu">选购Mac</div></a>
+				</div>
+		 	</div>
+			<div class="banner right">
+				<h1>iPad Pro</h1>
+				<h2>你的下一台电脑，何必是电脑。</h2>
+				<div class="link">
+					<a href=""><div class="dayu">进一步了解</div></a>
+					<a href=""><div class="dayu">购买</div></a>
+				</div>
+			</div>
+		 </div>
+		 <div class="subbanner sub2">
+		 	<div class="banner left">
+				<div class="watchlogo"></div>
+				<h2>自带全天候视网膜显示屏。<br>这块表，好不一样。</h2>
+				<div class="link">
+					<a href=""><div class="dayu">进一步了解</div></a>
+					<a href=""><div class="dayu">购买</div></a>
+				</div>
+		 	</div>
+			<div class="banner right">
+		 		<h1>iOS 14</h1>
+		 		<h2>这种新感觉，<br>一点不陌生。</h2>
+		 		<div class="link">
+		 			<a href=""><div class="dayu">查看预览</div></a>
+		 		</div>
+		 	</div>
+		 </div>
+		 <div class="subbanner sub3">
+		 	<div class="banner left">
+		 		<h1>iPadOS</h1>
+		 		<h2>独家新可能，由iPad来打开。</h2>
+		 		<div class="link">
+		 			<a href=""><div class="dayu">查看预览</div></a>
+		 		</div>
+		 	</div>
+			<div class="banner right">
+				<div class="link">
+					<a href=""><div class="dayu">进一步了解</div></a>
+				</div>
+		 	</div>
+		 </div>
 	</body>
 </html>

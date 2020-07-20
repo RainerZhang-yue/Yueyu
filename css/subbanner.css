@@ -1,0 +1,199 @@
+.subbanner{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.subbanner .banner{
+	width: 48vw;
+	height: 534px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.sub1 .left,.sub1 .right,.sub2 .right,.sub3 .right{
+	background-size: auto 100%;
+}
+
+.sub2 .left{
+	background-color: rgba(250,250,250,1);
+}
+
+.sub3 .left{
+	background-color: rgba(251,251,253,1);
+}
+
+.sub1 .left{
+	background-image: url(../img/subbanner1_left_m.jpg) ;
+}
+
+.sub1 .right{
+	background-image: url(../img/subbanner1_right_m.jpg);
+}
+
+.sub2 .left{
+	background-image: url(../img/subbanner2_left_m.jpg);
+}
+
+.sub2 .right{
+	background-image: url(../img/subbanner2_right_m.jpg);
+}
+
+.sub3 .left{
+	background-image: url(../img/subbanner3_left_m.jpg);
+}
+
+.sub3 .right{
+	background-image: url(../img/subbanner3_right_m.jpg);
+}
+
+.subbanner h1{
+	color: black;
+	font-size: 32px;
+	padding-top: 50px;
+}
+
+.subbanner h2{
+	color: black;
+	font-size: 18px;
+	margin-top: 8px;
+}
+
+.sub1 .left h1,.sub1 .left h2{
+	color: white;
+}
+
+.sub2 h2{
+	margin: 0 auto;
+	line-height: 25px;
+	position: relative;
+	left: 10px;
+}
+
+.subbanner .link a{
+	font-size: 18px;
+	position:relative;
+	left: 10px;
+}
+
+.sub1 .link a{
+	left: 0;
+}
+
+.sub3 .right .link a{
+	color: white;
+	top: 110px;
+}
+
+.watchlogo{
+	height: 80px;
+	width: 100%;
+	background-image: url(../img/watchlogo_large.png);
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 40px;
+}
+
+@media only screen and (min-width:1068px) {
+	.subbanner .banner{
+		height: 624px;
+	}
+	
+	.sub1 .left{
+		background-image: url(../img/subbanner1_left_l.jpg) ;
+	}
+	
+	.sub1 .right{
+		background-image: url(../img/subbanner1_right_l.jpg);
+	}
+	
+	.sub2 .left{
+		background-image: url(../img/subbanner2_left_l.jpg) ;
+	}
+	
+	.sub2 .right{
+		background-image: url(../img/subbanner2_right_l.jpg);
+	}
+	
+	.sub3 .left{
+		background-image: url(../img/subbanner3_left_l.jpg) ;
+	}
+	
+	.sub3 .right{
+		background-image: url(../img/subbanner3_right_l.jpg);
+	}
+	
+	.subbanner h1{
+		font-size: 32px;
+	}
+	
+	.subbanner h2{
+		font-size: 22px;
+	}
+	
+	.sub3 .right .link a{
+		top: 135px;
+	}
+}
+
+@media only screen and (min-width:734px) and (max-width:768px) {
+	.subbanner .banner{
+		height: 538px;
+	}
+}
+
+@media only screen and (max-width:734px) {
+	.subbanner{
+		flex-direction: column;
+	}
+	.subbanner .banner{
+		height: 548px;
+		width: 100vw;
+		margin-top: 10px;
+	}
+	
+	.sub1 .left{
+		background-image: url(../img/subbanner1_left_s.jpg) ;
+	}
+	
+	.sub1 .right{
+		background-image: url(../img/subbanner1_right_s.jpg);
+	}
+	
+	.sub2 .left{
+		background-image: url(../img/subbanner2_left_s.jpg) ;
+	}
+	
+	.sub2 .right{
+		background-image: url(../img/subbanner2_right_s.jpg);
+	}
+	
+	.sub3 .left{
+		background-image: url(../img/subbanner3_left_s.jpg) ;
+	}
+	
+	.sub3 .right{
+		background-image: url(../img/subbanner3_right_s.jpg);
+	}
+	
+	.subbanner h1{
+		font-size: 28px;
+	}
+	
+	.subbanner h2{
+		font-size: 16px;
+	}
+	
+	.sub3 .right .link a{
+		top: 150px;
+	}
+	
+	.watchlogo{
+		height: 60px;
+		background-image: url(../img/watchlogo_small.png);
+	}
+	
+	.subbanner .link a{
+		font-size: 14px;
+	}
+}

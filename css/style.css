@@ -1,0 +1,261 @@
+/* 
+初始化样式
+符号*，代表所有的样式
+ */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.ad{
+	width: 100%;
+	height: 40px;
+	background: #444;
+	display: flex;
+	justify-content: flex-end;
+	color: gray;
+	font-size: 10px;
+	line-height: 40px;
+	position: fixed;
+	top:0px;
+	z-index: 200;
+}
+
+.ad p{
+	padding-right: 5%;
+}
+
+.nav{
+	width: 100%;
+	height: 44px;
+	background: rgba(0,0,0,1);
+	/* 
+	r->red
+	g->green
+	b->blue
+	a->透明度
+	 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 40px;
+	z-index: 100;
+}
+
+.nav a{
+	color: white;
+	text-decoration: none;
+	width: 102px;
+	text-align: center;
+}
+
+.nav .logo{
+	height: 44px;
+	background-image: url(../img/logo.svg);
+	/* 设置背景图片不重复 */
+	background-repeat: no-repeat;
+	/* 设置背景图片的位置 */
+	background-position: center;
+}
+
+.nav .search{
+	height: 44px;
+	background-image: url(../img/search.svg);
+	/* 设置背景图片不重复 */
+	background-repeat: no-repeat;
+	background-size: auto 88px;
+	/* 设置背景图片的位置 */
+	background-position: top;
+}
+
+.nav .buy{
+	height: 44px;
+	background-image: url(../img/buy.svg);
+	/* 设置背景图片不重复 */
+	background-repeat: no-repeat;
+	/* 设置背景图片的位置 */
+	background-position: center;
+}
+
+.toggleBtn{
+	height: 44px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.toggleBtn .line{
+	width: 17px;
+	height: 1px;
+	background-color: #fff;
+	display: none;
+	transition: all .5s;
+	transform-origin: left;
+}
+
+.toggleBtn .line:nth-child(1){
+	position: absolute;
+	left: calc(50% - 9px);
+	top: 16px;
+}
+
+.toggleBtn .line:last-child{
+	position: absolute;
+	left: calc(50% - 9px);
+	top: 28px;
+}
+.navpage{
+	display: flex;
+	height: 0vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,1);
+	position:fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.navpage .navMain{
+	width: 100%;
+}
+/* 
+设定屏幕小于768像素时的样式
+ */
+@media only screen and (max-width:768px){
+	.ad{
+		height: 44px;
+	}
+	
+	.nav{
+		justify-content: space-between;
+		height: 48px;
+	}
+	
+	.nav .text,.nav .search{
+		display: none;
+	}
+	
+	.nav a, .nav label{
+		width: 50px;
+	}
+	
+	.nav .logo{
+		position: relative;
+		z-index: 100;
+	}
+	
+	.toggleBtn{
+		display: flex;
+		position: relative;
+		z-index: 100;
+	}
+	
+	.toggleBtn .line{
+		display: block;
+	}
+	
+	.nav .toggleBtn{
+		order: 1;
+	}
+	
+	.nav .logo{
+		order: 2;
+	}
+	
+	.nav .buy{
+		order: 3;
+	}
+	
+	.navpage{
+		transition: all .8s;
+	}
+	
+	#choose:checked~.toggleBtn .line:nth-child(1){
+		transform: rotate(45deg);
+	}
+	
+	#choose:checked~.toggleBtn .line:nth-child(2){
+		transform: rotate(-45deg);
+	}
+	
+	/* 设定复选框为选中状态时，导航页面展示 */
+	#choose:checked~.navpage{
+		display: flex;
+		/* 
+		vw:viewport width:100vw == 100% viewport width
+		vh:viewport height:100vh == 100% viewport height
+		 */
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,1);
+		color: #fff;
+		position:fixed;
+		left: 0;
+		top: 0;
+		flex-direction: column;
+		padding-top: 92px;
+	}
+	
+	.searchInput{
+		height: 36px;
+		margin: 0 34px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		border-radius: 10px;
+		color: #ccc;
+		background-color: rgba(29,29,31,0.98);
+	}
+	
+	.searchInput .icon{
+		width: 29px;
+		height: 36px;
+		background-image: url(../img/search.svg);
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: auto 72px;
+		margin-left: 5px;
+		/* 
+		注意：当设定背景图片时，一定要考虑url,重复,位置,尺寸
+		 */
+	}
+	
+	.searchInput input{
+		flex: 1;
+		height: 100%;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: white;
+		font-size: 15px;
+		font-family: "times new roman";
+	}
+	
+	hr{
+		border-color: #333;
+		margin: 10px 0;
+	}
+	
+	.navList{
+		margin: 0 34px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	
+	.navList a{
+		width: 100%;
+		height: 44px;
+		color: white;
+		text-align: left;
+		border-bottom: 1px solid #333;
+		line-height: 44px;
+	}
+	
+	.navList a:last-child{
+		border-bottom: none;
+	}
+}
